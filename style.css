@@ -7,7 +7,7 @@
 .navbar{
   display: flex;
   list-style: none;
-  background-color: #001133;
+  background-color: #001E62;
   height: 20%;
   font-size: 20px;
 }
@@ -29,7 +29,7 @@
   padding-top: 75px;
   left: 5vw;
   font-size: 70px;
-  color: #001133;
+  color: #001E62;
 }
 body{
   font-family: "Zen Kaku Gothic Antique", serif;
@@ -46,7 +46,7 @@ body{
 }
 #mail{
   font-size: 150%;
-  color: #902020;
+  color: #C63527;
 }
 #shitsumon{
   font-size: 110%;
@@ -112,5 +112,8 @@ footer{
 	.katsudou_haikei {
 	  background-color: #002E52;
 	  color: #CCCCCC;
+	}
+	footer{
+	  color: #FFFFFF;
 	}
 }
