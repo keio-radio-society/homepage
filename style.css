@@ -1,0 +1,112 @@
+#icon {
+  width: 20px;
+  margin: 0.5%;
+  display: inline;
+  vertical-align: middle;
+}
+.navbar{
+  display: flex;
+  list-style: none;
+  background-color: #001133;
+  height: 20%;
+  font-size: 20px;
+}
+.navbar a{
+  display: block;
+  text-decoration: none;
+  margin-right: 30px;
+  color: #FFFFFF;
+}
+#bg{
+  height: 80vh;
+  width: 100%;
+  object-fit:cover;
+  opacity: 0.7;
+}
+#krs_name{
+  position: absolute;
+  top: 25vh;
+  padding-top: 75px;
+  left: 5vw;
+  font-size: 70px;
+  color: #001133;
+}
+body{
+  font-family: "Zen Kaku Gothic Antique", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#username{
+  display: inline-block;
+  margin: 10px;
+}
+#midashi{
+ color: #000000;
+ padding-left: 1%;
+}
+#mail{
+  font-size: 150%;
+  color: #902020;
+}
+#shitsumon{
+  font-size: 110%;
+}
+#kaitou{
+  font-size: 90%;
+}
+.haikei{
+  width: 90%;
+  margin: 2.5%;
+  height: 20%;
+  background-color: #A3D1FF;
+  border-radius: 15px;
+  line-height: 30px;
+  color: #444444;
+  padding: 0.5%;
+  padding-right: 2%;
+  padding-left: 2%;
+  font-size: 115%;
+}
+footer{
+  display: flex;
+  justify-content: center;
+}
+.katsudou_haikei{
+  width: 90%;
+  margin: 2.5%;
+  height: 20%;
+  background-color: #A3D1FF;
+  border-radius: 15px;
+  line-height: 30px;
+  color: #444444;
+  padding: 0.5%;
+  padding-right: 2%;
+  padding-left: 2%;
+  font-size: 115%;
+  display: flex;
+}
+.katsudou_midashi{
+  margin: 20px;
+}
+#katsudou_pic{
+  width: 15vw;
+}
+
+@media (prefers-color-scheme: dark) {
+	#username {
+	  color: #FFFFFF;
+	}
+	#midashi {
+	  color: #FFFFFF;
+	}
+	body {
+	  background-color: #002020;
+	}
+	a{
+	  color: #6060FF
+	}
+	.haikei {
+	  background-color: #002E52;
+	  color: #CCCCCC;
+	}
+}
