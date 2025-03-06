@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-	<head>
-		<meta charset="utf-8">
-		<title>無線工学研究会</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel=”icon” href=“images/favicon.ico”>
-		<meta http-equiv="refresh" content="3;url=https://sites.google.com/keio.jp/ja1ycgkeio">
-		<script>
-			alert("これはサークルメンバーが作った非公式サイトです。\nこのメッセージを閉じて3秒後に公式サイト(https://sites.google.com/keio.jp/ja1ycgkeio)へジャンプします")
-		</script>
-	</head>
-
-	<body>
-		<nav>
-			<ul class="navbar">
-			  <li><a href="">HOME</a></li>
-			  <li><a href="activities.html">活動</a></li>
-			  <li><a href="contacts.html">ご連絡/FAQ</a></li>
-			</ul>
-		</nav>
-		<header>
-			<img id="bg" src="images/bg.jpg" alt="塾生会館屋上のアンテナ">
-            <h1 id ="krs_name">無線工学研究会</h1>
-        </header>
-		<h1 id="midashi">自動でジャンプしない場合、公式サイトは<a href=https://sites.google.com/keio.jp/ja1ycgkeio>こちら</a></h1></br>
-		<h2 id="midashi">About</h2>
-			<div class="haikei">
-				<p>
-					無線工学研究会は、昭和14（1939）年に、慶應義塾大学理工学部の前身である「藤原工業大学」の創立と同時期に誕生した、85年の歴史を誇るサークルです。</br>
-					主な活動場所は日吉キャンパスで、部室には100Wの無線機やコンピュータ、書籍等が多く備えられ、アマチュア無線と六大学野球慶早戦の音響運営を中心に活動しております。
-				</p>
-			</div>
-		<h2 id="midashi">活動報告/SNS</h2>
-			<div class="haikei">
-				活動報告のページは<a href=activities.html>こちら</a></br>
-				<a href=https://x.com/JA1YCG>Twitter(現X): @JA1YCG</a><br>
-				<a href=https://instagram.com/ja1ycg>Instagram: ja1ycg</a><br>
-			</div>
-		<h2 id="midashi">入会・お問い合わせ</h2>
-			<div class="haikei">
-				<p>
-					入会やその他のお問い合わせに関しては<a href="contacts.html">こちら</a>をご覧ください。
-				</p>
-			</div>
-		<footer>
-			<p>© 2025- Keio Radio Society. ALL RIGHTS RESERVED.</p>
-		</footer>
-	</body>
+  <head>
+    <meta charset="utf-8">
+    <title>無線工学研究会 - Modern Cyber Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+    <!-- 外部CSSファイル -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  </head>
+  <body>
+    <!-- Three.jsレンダラー用コンテナ -->
+    <div id="container"></div>
+    
+    <!-- ナビゲーション -->
+    <nav>
+       <div class="hamburger" onclick="toggleMenu()">☰</div>
+       <ul class="navbar">
+         <li><a href="#">HOME</a></li>
+         <li><a href="activities.html">活動</a></li>
+         <li><a href="contacts.html">ご連絡/FAQ</a></li>
+       </ul>
+    </nav>
+    
+    <!-- メインコンテンツ -->
+    <div class="content">
+       <h1>無線工学研究会</h1>
+       <p>
+         無線工学研究会は、昭和14（1939）年に、慶應義塾大学理工学部の前身である「藤原工業大学」の創立と同時期に誕生した、85年の歴史を誇るサークルです。<br>
+         主な活動場所は日吉キャンパスで、部室には100Wの無線機やコンピュータ、書籍等が多く備えられ、アマチュア無線と六大学野球慶早戦の音響運営を中心に活動しております。
+       </p>
+       <h2>活動報告/SNS</h2>
+       <p>
+         活動報告のページは<a href="activities.html">こちら</a><br>
+         <a href="https://x.com/JA1YCG">Twitter(現X): @JA1YCG</a><br>
+         <a href="https://instagram.com/ja1ycg">Instagram: ja1ycg</a>
+       </p>
+       <h2>入会・お問い合わせ</h2>
+       <p>
+         入会やその他のお問い合わせに関しては<a href="contacts.html">こちら</a>をご覧ください。
+       </p>
+       <p>
+         自動でジャンプしない場合、公式サイトは<a href="https://sites.google.com/keio.jp/ja1ycgkeio">こちら</a>
+       </p>
+    </div>
+    
+    <!-- フッター -->
+    <footer>
+       <p>© 2025- Keio Radio Society. ALL RIGHTS RESERVED.</p>
+    </footer>
+    
+    <!-- 背景アニメーションの処理（外部JSファイル） -->
+    <script src="background.js"></script>
+    <!-- ナビゲーションのトグル処理 -->
+    <script>
+      function toggleMenu() {
+         const navUl = document.querySelector('nav ul.navbar');
+         navUl.classList.toggle('active');
+      }
+    </script>
+  </body>
 </html>
