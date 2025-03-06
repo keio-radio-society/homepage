@@ -17,15 +17,8 @@
     <!-- Three.jsレンダラー用コンテナ -->
     <div id="container"></div>
     
-    <!-- ナビゲーション -->
-    <nav>
-       <div class="hamburger" onclick="toggleMenu()">☰</div>
-       <ul class="navbar">
-         <li><a href="#">HOME</a></li>
-         <li><a href="activities.html">活動</a></li>
-         <li><a href="contacts.html">ご連絡/FAQ</a></li>
-       </ul>
-    </nav>
+    <!-- ナビゲーション読み込み用コンテナ -->
+    <div id="nav-container"></div>
     
     <!-- メインコンテンツ -->
     <div class="content">
@@ -56,12 +49,14 @@
     
     <!-- 背景アニメーションの処理（外部JSファイル） -->
     <script src="background.js"></script>
-    <!-- ナビゲーションのトグル処理 -->
+    <!-- ナビゲーションの読み込み -->
     <script>
-      function toggleMenu() {
-         const navUl = document.querySelector('nav ul.navbar');
-         navUl.classList.toggle('active');
-      }
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('nav-container').innerHTML = data;
+        })
+        .catch(err => console.error(err));
     </script>
   </body>
 </html>

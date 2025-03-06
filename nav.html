@@ -1,0 +1,16 @@
+<nav>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="navbar">
+      <li><a href="#">HOME</a></li>
+      <li><a href="activities.html">活動</a></li>
+      <li><a href="contacts.html">ご連絡/FAQ</a></li>
+    </ul>
+  </nav>
+  <script>
+    // ハンバーガーメニューのトグル処理
+    function toggleMenu() {
+      const navUl = document.querySelector('nav ul.navbar');
+      navUl.classList.toggle('active');
+    }
+  </script>
+  
