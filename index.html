@@ -42,19 +42,26 @@
        </p>
     </div>
     
-    <!-- フッター -->
-    <footer>
-       <p>© 2025- Keio Radio Society. ALL RIGHTS RESERVED.</p>
-    </footer>
+    <!-- フッター読み込み用コンテナ -->
+    <div id="footer-container"></div>
     
     <!-- 背景アニメーションの処理（外部JSファイル） -->
     <script src="background.js"></script>
-    <!-- ナビゲーションの読み込み -->
+    <!-- 共通パーツの読み込み -->
     <script>
+      // ナビゲーションの読み込み
       fetch('nav.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('nav-container').innerHTML = data;
+        })
+        .catch(err => console.error(err));
+
+      // フッターの読み込み
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
         })
         .catch(err => console.error(err));
     </script>
