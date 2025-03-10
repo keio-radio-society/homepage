@@ -1,59 +1,80 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>無線工学研究会 - ご連絡/FAQ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+    <!-- 外部CSSファイル -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  </head>
+  <body>
+    <!-- Three.jsレンダラー用コンテナ -->
+    <div id="container"></div>
+    
+    <!-- ナビゲーション読み込み用コンテナ -->
+    <div id="nav-container"></div>
+    
+    <!-- メインコンテンツ -->
+    <div class="content">
+       <h2 id="midashi">2024年度の活動</h2>
+       <h3 id="midashi">
+         2025年度も同様の活動を予定しています。また、この他にも年2回の総会が開かれていたり、部室を自由に使ったりしています！
+       </h3>
+       <div class="katsudou_haikei">
+         <img src="images/04.jpeg" id="katsudou_pic">
+         <h3 class="katsudou_midashi">4月  - 新歓</h3>
+       </div>
+       <div class="katsudou_haikei">
+         <img src="images/05.jpeg" id="katsudou_pic">
+         <h3 class="katsudou_midashi">5月  - 春季慶早戦</h3>
+       </div>
+       <div class="katsudou_haikei">
+         <img src="images/06.jpeg" id="katsudou_pic">
+         <h3 class="katsudou_midashi">6月  - 懇親会</h3>
+       </div>
+       <div class="katsudou_haikei">
+         <img src="images/08.jpeg" id="katsudou_pic">
+         <h3 class="katsudou_midashi">8月  - 3アマ勉強会</h3>
+       </div>
+       <div class="katsudou_haikei">
+         <img src="images/10.jpeg" id="katsudou_pic">
+         <h3 class="katsudou_midashi">10月 - 秋季慶早戦</h3>
+       </div>
+       <div class="katsudou_haikei">
+         <img src="images/03.jpeg" id="katsudou_pic">
+         <h3 class="katsudou_midashi">3月  - 移動運用</h3>
+       </div>
+    </div>
+    
+    <!-- フッター読み込み用コンテナ -->
+    <div id="footer-container"></div>
+    
+    <!-- 背景アニメーションの処理（外部JSファイル） -->
+    <script src="background.js"></script>
+    <!-- 共通パーツの読み込み -->
+    <script>
+      // ナビゲーションの読み込み
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('nav-container').innerHTML = data;
+        })
+        .catch(err => console.error(err));
 
-	<head>
-		<meta charset="utf-8">
-		<title>無線工学研究会 - ご連絡/FAQ</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel=”icon” href=“images/favicon.ico”>
-		<meta http-equiv="refresh" content="3;url=https://sites.google.com/keio.jp/ja1ycgkeio">
-		<script>
-			alert("これはサークルメンバーが作った非公式サイトです。\nこのメッセージを閉じて3秒後に公式サイト(https://sites.google.com/keio.jp/ja1ycgkeio)へジャンプします")
-		</script>
-	</head>
-
-	<body>
-		<nav>
-			<ul class="navbar">
-			  <li><a href="index.html">HOME</a></li>
-			  <li><a href="">活動</a></li>
-			  <li><a href="contacts.html">ご連絡/FAQ</a></li>
-			</ul>
-		</nav>
-        <h2 id="midashi">2024年度の活動</h2>
-        <h3 id="midashi">
-            2025年度も同様の活動を予定しています。また、この他にも年2回の総会が開かれていたり、部室を自由に使ったりしています！
-        </h3>
-        <div class="katsudou_haikei">
-            <img src="images/04.jpeg" id="katsudou_pic">
-            <h3 class="katsudou_midashi">4月  - 新歓</h3>
-        </div>
-        <div class="katsudou_haikei">
-            <img src="images/05.jpeg" id="katsudou_pic">
-            <h3 class="katsudou_midashi">5月  - 春季慶早戦</h3>
-        </div>
-        <div class="katsudou_haikei">
-            <img src="images/06.jpeg" id="katsudou_pic">
-            <h3 class="katsudou_midashi">6月  - 懇親会</h3>
-        </div>
-        <div class="katsudou_haikei">
-            <img src="images/08.jpeg" id="katsudou_pic">
-            <h3 class="katsudou_midashi">8月  - 3アマ勉強会</h3>
-        </div>
-        <div class="katsudou_haikei">
-            <img src="images/10.jpeg" id="katsudou_pic">
-            <h3 class="katsudou_midashi">10月 - 秋季慶早戦</h3>
-        </div>
-        <div class="katsudou_haikei">
-            <img src="images/03.jpeg" id="katsudou_pic">
-            <h3 class="katsudou_midashi">3月  - 移動運用</h3>
-        </div>
-        <footer>
-            <p>© 2025- Keio Radio Society. ALL RIGHTS RESERVED.</p>
-        </footer>
-    </body>
+      // フッターの読み込み
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(err => console.error(err));
+    </script>
+  </body>
 </html>

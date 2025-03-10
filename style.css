@@ -1,119 +1,132 @@
-#icon {
-  width: 20px;
-  margin: 0.5%;
-  display: inline;
-  vertical-align: middle;
-}
-.navbar{
-  display: flex;
-  list-style: none;
-  background-color: #001E62;
-  height: 20%;
-  font-size: 20px;
-}
-.navbar a{
-  display: block;
-  text-decoration: none;
-  margin-right: 30px;
-  color: #FFFFFF;
-}
-#bg{
-  height: 80vh;
-  width: 100%;
-  object-fit:cover;
-  opacity: 0.7;
-}
-#krs_name{
-  position: absolute;
-  top: 25vh;
-  padding-top: 75px;
-  left: 5vw;
-  font-size: 70px;
-  color: #001E62;
-}
-body{
-  font-family: "Zen Kaku Gothic Antique", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-#username{
-  display: inline-block;
-  margin: 10px;
-}
-#midashi{
- color: #000000;
- padding-left: 1%;
-}
-#mail{
-  font-size: 150%;
-  color: #C63527;
-}
-#shitsumon{
-  font-size: 110%;
-}
-#kaitou{
-  font-size: 90%;
-}
-.haikei{
-  width: 90%;
-  margin: 2.5%;
-  height: 20%;
-  background-color: #A3D1FF;
-  border-radius: 15px;
-  line-height: 30px;
-  color: #444444;
-  padding: 0.5%;
-  padding-right: 2%;
-  padding-left: 2%;
-  font-size: 115%;
-}
-footer{
-  display: flex;
-  justify-content: center;
-}
-.katsudou_haikei{
-  width: 90%;
-  margin: 2.5%;
-  height: 20%;
-  background-color: #A3D1FF;
-  border-radius: 15px;
-  line-height: 30px;
-  color: #444444;
-  padding: 0.5%;
-  padding-right: 2%;
-  padding-left: 2%;
-  font-size: 115%;
-  display: flex;
-}
-.katsudou_midashi{
-  margin: 20px;
-}
-#katsudou_pic{
-  width: 15vw;
-}
-
-@media (prefers-color-scheme: dark) {
-	#username {
-	  color: #FFFFFF;
-	}
-	#midashi {
-	  color: #FFFFFF;
-	}
-	body {
-	  background-color: #002020;
-	}
-	a{
-	  color: #6060FF
-	}
-	.haikei {
-	  background-color: #002E52;
-	  color: #CCCCCC;
-	}
-	.katsudou_haikei {
-	  background-color: #002E52;
-	  color: #CCCCCC;
-	}
-	footer{
-	  color: #FFFFFF;
-	}
-}
+/* 全体のリセットと背景 */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background: #000;
+    color: #fff;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+ }
+ /* Three.jsのレンダラーを入れるコンテナ */
+ #container {
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+ }
+ /* ナビゲーションバー */
+ nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ /* ハンバーガーメニュー */
+ .hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+ }
+ nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+ }
+ nav ul li {
+    margin: 0 15px;
+ }
+ nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+ }
+ nav ul li a:hover {
+    color: #0ff;
+    transform: scale(1.1);
+ }
+ /* コンテンツオーバーレイ */
+ .content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin: 120px auto 80px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+ }
+ .content h1 {
+    margin-bottom: 15px;
+    font-size: 36px;
+    font-weight: bold;
+ }
+ .content h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: bold;
+ }
+ .content p {
+    line-height: 1.6;
+    font-size: 18px;
+ }
+ .content a {
+    color: #0ff;
+    text-decoration: underline;
+    transition: color 0.3s, transform 0.3s;
+ }
+ .content a:hover {
+    color: #fff;
+    transform: scale(1.05);
+ }
+ /* フッター */
+ footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+ }
+ /* メディアクエリ：画面幅が600px以下の場合 */
+ @media (max-width: 600px) {
+    .hamburger {
+       display: block;
+    }
+    nav ul {
+       flex-direction: column;
+       position: absolute;
+       top: 50px;
+       left: 0;
+       width: 100%;
+       background: rgba(0, 0, 0, 0.8);
+       display: none;
+    }
+    nav ul.active {
+       display: flex;
+    }
+    nav ul li {
+       margin: 10px 0;
+    }
+ }
+ /* コンテンツフェードイン用アニメーション */
+ @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+ }
+ 
