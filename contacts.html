@@ -1,141 +1,117 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>無線工学研究会 - ご連絡/FAQ</title>
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
-    <!-- 外部CSSファイル -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- 各質問の点を消し、回答の色を変える -->
+    <title>入会・お問い合わせ - 無線工学研究会</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap" rel="stylesheet">
     <style>
-      ul{list-style: none;}
-      #kaitou{color: rgba(200, 200, 200, 0.7);}
+        .faq-section {
+            margin-top: 40px;
+        }
+        .faq-item {
+            margin-bottom: 25px;
+            border-left: 4px solid var(--dark-blue);
+            padding-left: 20px;
+        }
+        .question {
+            font-weight: 900;
+            color: var(--dark-blue);
+            margin-bottom: 10px;
+            display: block;
+        }
+        .answer {
+            font-weight: 400;
+            color: #555;
+            line-height: 1.8;
+        }
+        .mail-box {
+            background: #eef7ff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px dashed var(--dark-blue);
+            margin: 20px 0;
+        }
+        #mail {
+            font-family: monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent-red);
+        }
     </style>
-    <!-- Three.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  </head>
-  <body>
-    <!-- Three.jsレンダラー用コンテナ -->
-    <div id="container"></div>
-    
-    <!-- ナビゲーション読み込み用コンテナ -->
+</head>
+<body>
     <div id="nav-container"></div>
-    
-    <!-- メインコンテンツ -->
+
     <div class="content">
-      <h2 id="midashi">入会・お問い合わせ</h2>
-      <div class="haikei">
-        <p>
-          入会を希望される方や、お問い合わせの方は下記アドレスまでメールをお願いします。<br>
-          <span id="mail">ja1ycg-group[at]keio.jp</span><br>
-          ※入会希望の方は@keio.jpのメールアドレスをご利用いただきますようお願いいたします。
-        </p>
-      </div>
-      <h2 id="midashi">よくあるご質問</h2>
-      <h3 id="midashi">入会について</h3>
-      <div class="haikei">
-        <ul>
-          <li id="shitsumon">アマチュア無線の免許を持っていませんが、入会できますか？</li>
-          <p id="kaitou">
-            大歓迎です。入会後に取得する会員が大半です。また、免許のいらない無線機や、アマチュア無線以外の活動（慶早戦の音響運営など）もあるので、免許がない間もサークル活動が全く出来ないということはありません。ちなみに、アマチュア無線の資格は小学生でも取得者が居る程度なので、塾生の皆さんであればすぐに取得できるはずです。
-          </p>
-          <li id="shitsumon">文系ですが入会できますか？</li>
-          <p id="kaitou">
-            差し支えありません。文系学部の会員の方が多い時期もありました。
-          </p>
-          <li id="shitsumon">SFC生ですが入会できますか？</li>
-          <p id="kaitou">
-            差し支えありません。都合の良い時だけ日吉に遊びにきてもらえれば大丈夫です！普段の連絡はDiscordで行いますので、日吉に来られないからといって会員と疎遠になるということもありません。
-          </p>
-          <li id="shitsumon">女子ですが入会できますか？</li>
-          <p id="kaitou">
-            差し支えありません。女子の会員も所属しています。無線通信では高い声のほうが聞こえやすいので、交信の面でも実は女子が有利です。
-          </p>
-          <li id="shitsumon">2年生以上ですが入会できますか？</li>
-          <p id="kaitou">
-            大歓迎です。途中から入会した会員も多数在籍しています。
-          </p>
-          <li id="shitsumon">他大学の学生ですが入会できますか？</li>
-          <p id="kaitou">
-            申し訳ございません。本団体は公認団体であるため、慶應義塾大学正規通学課程の学部生、大学院生以外は新たに入会することができません。
-          </p>
-          <li id="shitsumon">会費はいくらですか？</li>
-          <p id="kaitou">
-            年会費5,000円となります。入会費はいただいておりません。
-          </p>
-        </ul>
-      </div>
-      <h3 id="midashi">サークルについて</h3>
-      <div class="haikei">
-        <ul>
-          <li id="shitsumon">慶早戦ではどのような活動を行っているのですか？</li>
-          <p id="kaitou">
-            東京六大学野球慶早戦の応援席にて、マイク・スピーカーを設置・運用しています。音響設備を扱った経験がある方なら、「PA」というとピンとくるはずです。
-          </p>
-          <li id="shitsumon">「JA1YCG」とは何ですか？何と読むのですか？</li>
-          <p id="kaitou">
-            総務省から「慶應義塾大学無線工学研究会」という無線局に対して割り当てられている識別符号（コールサイン）です。読み方ですが、基本的にはそのままアルファベットで読んでいただいて結構です。但し、無線交信においては聞き取りの間違いを防ぐために「フォネティックコード」というものを使うことがあります。その場合は「ジュリエット・アルファ・ワン・ヤンキー・チャーリー・ゴルフ」と読み上げます。
-          </p>
-          <li id="shitsumon">いつできたサークルですか？</li>
-          <p id="kaitou">
-            慶應義塾大学理工学部の前身である藤原工業大学の創立（1939（昭和14）年）と同時期に誕生しました。85年の歴史を誇ります。
-          </p>
-          <li id="shitsumon">部室はどこにあるのですか？</li>
-          <p id="kaitou">
-            3つのキャンパスに部室があります。<br>
-            日吉キャンパス：塾生会館　220号室（2階の生協に一番近い部屋）<br>
-            三田キャンパス：学生団体ルーム　3番<br>
-            矢上キャンパス：16B-210<br>
-            主に無線設備のある日吉部室にて活動が行われます。
-          </p>
-        </ul>
-      </div>
-      <h3 id="midashi">アマチュア無線について</h3>
-      <div class="haikei">
-        <ul>
-          <li id="shitsumon">アマチュア無線とは何ですか？</li>
-          <p id="kaitou">
-            アマチュア無線は、個人的な興味によって行う無線通信であり、国内・海外と幅広く交信や無線通信技術への興味による通信が行われています<a href="https://www.tele.soumu.go.jp/j/others/amateur/">（総務省HPより）</a>。当団体は、固定局及び移動局の免許を受けており、第1級アマチュア無線技士免許を取得することで、全てのアマチュア無線操作を行うことができます。もちろん、3級、4級でも周波数や空中線電力の制約はありますが、十二分に交信を楽しむことができます。 
-          </p>
-          <li id="shitsumon">コンテストとは何ですか？</li>
-          <p id="kaitou">
-            アマチュア無線の大会です。決められた時間内にどれだけ多くの無線局と交信したかを競います。
-          </p>
-          <li id="shitsumon">通信には免許が必要と聞きましたが、勉強が必要なのですか？</li>
-          <p id="kaitou">
-            国家資格ですが、小学生でも合格者が居るような試験なので易しいといえます。文系・理系は関係ないレベルです。「第3級アマチュア無線技士」程度であれば、市販の問題集を丸暗記するだけで取得できます。
-          </p>
-        </ul>
-      </div>
+        <header style="background: var(--dark-blue); color: white; text-align: center; padding: 60px 0;">
+            <h1>入会・お問い合わせ</h1>
+        </header>
+
+        <main class="container">
+            <section class="about">
+                <h2>Contact</h2>
+                <p>入会を希望される方や、お問い合わせの方は下記アドレスまでメールをお願いします。</p>
+                <div class="mail-box">
+                    <span id="mail">ja1ycg-group[at]keio.jp</span><br>
+                    <small style="color: #666;">※入会希望の方は大学のメールアドレス（@keio.jp）からご連絡ください。</small>
+                </div>
+            </section>
+
+            <section class="about faq-section">
+                <h2 style="border-bottom: 2px solid var(--dark-blue); padding-bottom: 10px; margin-bottom: 30px;">よくあるご質問</h2>
+
+                <h3>入会について</h3>
+                <div class="faq-item">
+                    <span class="question">Q. アマチュア無線の免許を持っていませんが、入会できますか？</span>
+                    <p class="answer">大歓迎です。入会後に取得する会員が大半です。免許がなくてもできる活動（慶早戦の音響運営など）もありますし、アマチュア無線の免許自体も取得の難しいものではありません。</p>
+                </div>
+
+                <div class="faq-item">
+                    <span class="question">Q. 文系（またはSFC生・女子・2年生以上）ですが入会できますか？</span>
+                    <p class="answer">すべて大歓迎です！文系会員が多い時期もありますし、SFC生もDiscord等を活用して交流可能です。女性部員も複数在籍していますし、学年も問いません。</p>
+                </div>
+
+                <div class="faq-item">
+                    <span class="question">Q. 他大学の学生ですが入会できますか？</span>
+                    <p class="answer">申し訳ございません。本団体は慶應義塾大学の公認団体であるため、塾生（学部・大学院）以外の方は入会いただけません。</p>
+                </div>
+
+                <div class="faq-item">
+                    <span class="question">Q. どのくらいの費用がかかるのでしょうか？</span>
+                    <p class="answer">年会費5,000円となります。入会費はいただいておりません。</p>
+                </div>
+
+                <h3>サークル・無線について</h3>
+                <div class="faq-item">
+                    <span class="question">Q. 部室はどこにありますか？</span>
+                    <p class="answer">日吉（塾生会館220）、三田（学生団体ルーム3）、矢上（16B-210）の3箇所にあります。メインの活動は無線設備のある日吉で行っています。</p>
+                </div>
+
+                <div class="faq-item">
+                    <span class="question">Q. アマチュア無線とは何ですか？JA1YCGってなんですか？</span>
+                    <p class="answer">アマチュア無線は、個人的な興味によって行う無線通信であり、国内・海外と幅広く交信や無線通信技術への興味による通信が行われています（総務省HPより）。また、当団体は、固定局及び移動局の免許を受けており、社団局としてのコールサインが「JA1YCG」となっています。</p>
+                </div>
+            </section>
+
+            <section class="footer-cta">
+                <a href="index.html" class="btn">トップへ戻る</a>
+                <a href="activities.html" class="btn">活動紹介を見る</a>
+            </section>
+        </main>
     </div>
-    
-    <!-- フッター読み込み用コンテナ -->
-    <div id="footer-container"></div>
-    
-    <!-- 背景アニメーションの処理（外部JSファイル） -->
-    <script src="background.js"></script>
-    <!-- 共通パーツの読み込み -->
+
+    <footer style="text-align: center;">&copy; 2026 Keio Radio Society. ALL RIGHTS RESERVED.</footer>
+
     <script src="nav.js"></script>
     <script>
-      // ナビゲーションの読み込み
       fetch('nav.html')
         .then(response => response.text())
-        .then(data => {
-          document.getElementById('nav-container').innerHTML = data;
-        })
-        .catch(err => console.error(err));
-    
-      // フッターの読み込み
-      fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-container').innerHTML = data;
-        })
+        .then(data => { document.getElementById('nav-container').innerHTML = data; })
         .catch(err => console.error(err));
     </script>
-  </body>
+</body>
 </html>

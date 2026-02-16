@@ -1,81 +1,139 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>無線工学研究会 - 活動</title>
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
-    <!-- 外部CSSファイル -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" href="images/favicon.ico">
-    <!-- Three.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  </head>
-  <body>
-    <!-- Three.jsレンダラー用コンテナ -->
-    <div id="container"></div>
-    
-    <!-- ナビゲーション読み込み用コンテナ -->
+    <title>活動紹介 - 無線工学研究会</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap" rel="stylesheet">
+    <style>
+        /* 活動紹介ページ専用の微調整 */
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .activity-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .activity-card:hover {
+            transform: translateY(-5px);
+        }
+        .activity-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .activity-card h3 {
+            padding: 15px;
+            font-size: 1.1rem;
+            color: var(--dark-blue);
+            text-align: center;
+        }
+        .page-title {
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+            background: var(--dark-blue);
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
     <div id="nav-container"></div>
-    
-    <!-- メインコンテンツ -->
+
     <div class="content">
-       <h2 id="midashi">2024年度の活動</h2>
-       <h3 id="midashi">
-         2025年度も同様の活動を予定しています。また、この他にも年2回の総会が開かれていたり、部室を自由に使ったりしています！
-       </h3>
-       <div class="katsudou_haikei">
-         <a href=images/placeholder.jpeg><img src="images/placeholder_thumb.jpeg" id="katsudou_pic"></a>
-         <h3 class="katsudou_midashi">4月  - 新歓</h3>
-       </div>
-       <div class="katsudou_haikei">
-         <a href=images/placeholder.jpeg><img src="images/placeholder_thumb.jpeg" id="katsudou_pic"></a>
-         <h3 class="katsudou_midashi">5月  - 春季慶早戦</h3>
-       </div>
-       <div class="katsudou_haikei">
-         <a href=images/placeholder.jpeg><img src="images/placeholder_thumb.jpeg" id="katsudou_pic"></a>
-         <h3 class="katsudou_midashi">6月  - 懇親会</h3>
-       </div>
-       <div class="katsudou_haikei">
-         <a href=images/placeholder.jpeg><img src="images/placeholder_thumb.jpeg" id="katsudou_pic"></a>
-         <h3 class="katsudou_midashi">8月  - 3アマ勉強会</h3>
-       </div>
-       <div class="katsudou_haikei">
-         <a href=images/placeholder.jpeg><img src="images/placeholder_thumb.jpeg" id="katsudou_pic"></a>
-         <h3 class="katsudou_midashi">10月 - 秋季慶早戦</h3>
-       </div>
-       <div class="katsudou_haikei">
-         <a href=images/placeholder.jpeg><img src="images/placeholder_thumb.jpeg" id="katsudou_pic"></a>
-         <h3 class="katsudou_midashi">3月  - 移動運用</h3>
-       </div>
+        <header class="page-title">
+            <h1>活動紹介</h1>
+            <p>情報は2025年度のものですが、2026年度も同様の活動を予定しています</p>
+        </header>
+
+        <main class="container">
+            <section class="about">
+                <p style="text-align: center; margin-bottom: 0;">
+                    年2回の総会や、日吉キャンパスの部室での自由な活動を中心に、<br>
+                    季節ごとの移動運用や慶早戦の音響運営を行っています。
+                </p>
+
+                <div class="activity-grid">
+                    <div class="activity-card">
+                        <img src="images/04.jpg" alt="新歓">
+                        <h3>4月 - 新歓</h3>
+                    </div>
+                    <div class="activity-card">
+                        <img src="images/05.jpg" alt="春季慶早戦">
+                        <h3>5月 - 春季慶早戦</h3>
+                    </div>
+                    <div class="activity-card">
+                        <img src="images/08.jpg" alt="移動運用（成田）">
+                        <h3>8月 - 移動運用（成田）</h3>
+                    </div>
+                    <div class="activity-card">
+                        <img src="images/09.jpg" alt="移動運用（厚木）">
+                        <h3>9月 - 移動運用（厚木）</h3>
+                    </div>
+                    <div class="activity-card">
+                        <img src="images/10.jpg" alt="コンテスト">
+                        <h3>10月 - コンテスト参加（ゲストオペレーター）</h3>
+                    </div>
+                    <div class="activity-card">
+                        <img src="images/11_1.jpg" alt="秋季慶早戦">
+                        <h3>11月 - 秋季慶早戦</h3>
+                    </div>
+                    <div class="activity-card">
+                        <img src="images/11_2.jpg" alt="三田祭出展">
+                        <h3>11月 - 三田祭出展</h3>
+                    </div>
+                    <div class="activity-card">
+                        <img src="images/placeholder.jpeg" alt="移動運用">
+                        <h3>3月 - 移動運用</h3>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section class="about">
+                <p style="text-align: center; margin-bottom: 0;">
+                    日吉・矢上・三田の3キャンパスに部室があります
+                </p>
+                <div class="activity-grid">
+                    <div class="activity-card">
+                        <img src="images/hiyoshi.jpg" alt="日吉部室">
+                        <h3>日吉部室（塾生会館220号室）</h3>
+                    </div>
+                    <div class="activity-card">
+                        <img src="images/yagami.jpg" alt="矢上部室">
+                        <h3>矢上部室（16B-210）</h3>
+                    </div>
+                    <div class="activity-card">
+                        <img src="images/mita.jpg" alt="三田部室">
+                        <h3>三田部室（学生団体ルーム3番）</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="footer-cta">
+                <a href="index.html" class="btn">トップへ戻る</a>
+                <a href="contacts.html" class="btn">入会・お問い合わせはこちら</a>
+            </section>
+        </main>
     </div>
-    
-    <!-- フッター読み込み用コンテナ -->
-    <div id="footer-container"></div>
-    
-    <!-- 背景アニメーションの処理（外部JSファイル） -->
-    <script src="background.js"></script>
-    <!-- 共通パーツの読み込み -->
+
+    <footer style="text-align: center;">&copy; 2026 Keio Radio Society. ALL RIGHTS RESERVED.</footer>
+
     <script src="nav.js"></script>
     <script>
-      // ナビゲーションの読み込み
       fetch('nav.html')
         .then(response => response.text())
-        .then(data => {
-          document.getElementById('nav-container').innerHTML = data;
-        })
-        .catch(err => console.error(err));
-
-      // フッターの読み込み
-      fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-container').innerHTML = data;
-        })
+        .then(data => { document.getElementById('nav-container').innerHTML = data; })
         .catch(err => console.error(err));
     </script>
-  </body>
+</body>
 </html>
