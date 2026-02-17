@@ -1,132 +1,247 @@
-/* 全体のリセットと背景 */
-body, html {
+/* --- 変数定義 --- */
+:root {
+    --dark-blue: #005a8d;
+    --accent-red: #D63232;
+    --text-color: #333;
+    --white: #ffffff; /* 追加 */
+}
+
+/* --- 全体リセット & 基本設定 --- */
+* {
     margin: 0;
     padding: 0;
-    overflow: auto;
-    background: #000;
-    color: #fff;
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
- }
- /* Three.jsのレンダラーを入れるコンテナ */
- #container {
-    position: fixed;
-    pointer-events: none;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
- }
- /* ナビゲーションバー */
- nav {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.content {
+    font-family: 'Zen Kaku Gothic Antique', 'Noto Sans JP', sans-serif; /* 統合 */
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f0f8ff;
+    padding-top: 45px;
+    overflow-x: hidden;
+}
+
+/* --- ナビゲーション --- */
+nav {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 100;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 90, 141, 0.5);
     padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
- }
- /* ハンバーガーメニュー */
- .hamburger {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    user-select: none;
- }
- nav ul {
+}
+
+nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
- }
- nav ul li {
+}
+
+nav ul li {
     margin: 0 15px;
- }
- nav ul li a {
+}
+
+nav ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
     transition: color 0.3s, transform 0.3s;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
- }
- nav ul li a:hover {
+    display: inline-block;
+}
+
+nav ul li a:hover {
     color: #0ff;
     transform: scale(1.1);
- }
- /* コンテンツオーバーレイ */
- .content {
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* --- ヒーローエリア --- */
+.hero {
+    position: relative;
+    height: 80vh;
+    background: url('images/antenna.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+}
+
+.vertical-text {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    writing-mode: vertical-rl;
+    font-size: 1.8rem;
+    letter-spacing: 0.5em;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    font-family: "Klee One", cursive;
+    font-weight: 600; /* 900を削除し統合 */
+}
+
+.hero-content {
+    background-color: var(--dark-blue);
+    margin-left: 15vw;
+    padding: 20px 40px;
+    width: fit-content;
+    border-radius: 10px;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+}
+
+/* --- レイアウト & コンテンツ --- */
+.container {
+    max-width: 1000px;
+    margin: -40px auto 0;
+    padding: 20px;
     position: relative;
     z-index: 10;
-    max-width: 800px;
-    margin: 120px auto 80px;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px 30px;
-    border-radius: 10px;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.about {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.about p {
+    margin-bottom: 30px;
+}
+
+.info-card {
+    background-color: var(--accent-red);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    height: fit-content;
+    transform: rotate(2deg);
+}
+
+.info-card ul {
+    list-style: none;
+}
+
+.info-card li {
+    border-bottom: 1px dashed rgba(255,255,255,0.5);
+    padding: 8px 0;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.photo-item {
+    height: 150px;
+    background: #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    border: 3px solid white;
+}
+
+/* --- ボタン & フッター --- */
+.footer-cta {
     text-align: center;
-    animation: fadeIn 1s ease-out;
- }
- .content h1 {
-    margin-bottom: 15px;
-    font-size: 36px;
+    padding: 50px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--dark-blue);
+    color: white;
+    padding: 15px 40px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 50px;
     font-weight: bold;
- }
- .content h2 {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-size: 28px;
-    font-weight: bold;
- }
- .content p {
-    line-height: 1.6;
-    font-size: 18px;
- }
- .content a {
-    color: #0ff;
-    text-decoration: underline;
-    transition: color 0.3s, transform 0.3s;
- }
- .content a:hover {
-    color: #fff;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
     transform: scale(1.05);
- }
- /* フッター */
- footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 100;
-    background: rgba(0, 0, 0, 0.5);
+}
+
+footer {
     text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
- }
- /* メディアクエリ：画面幅が600px以下の場合 */
- @media (max-width: 600px) {
-    .hamburger {
-       display: block;
-    }
-    nav ul {
-       flex-direction: column;
-       position: absolute;
-       top: 50px;
-       left: 0;
-       width: 100%;
-       background: rgba(0, 0, 0, 0.8);
-       display: none;
-    }
-    nav ul.active {
-       display: flex;
-    }
-    nav ul li {
-       margin: 10px 0;
-    }
- }
- /* コンテンツフェードイン用アニメーション */
- @keyframes fadeIn {
+    padding-bottom: 20px;
+}
+
+/* --- アニメーション --- */
+@keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
- }
- 
+}
+
+/* --- スマホ対応 (メディアクエリ) --- */
+@media (max-width: 768px) {
+    body{
+        padding-top:15px;
+    }
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .vertical-text {
+        font-size: 1.2rem;
+    }
+    .hamburger {
+        display: block;
+    }
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 90, 141, 0.9);
+        display: none;
+    }
+    nav ul.active {
+        display: flex;
+    }
+    nav ul li {
+        margin: 10px 15px;
+    }
+}
