@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - 無線工学研究会</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXX');
+    </script>
+    
+    <style>
+        .policy-section {
+            margin-top: 40px;
+        }
+        .policy-item {
+            margin-bottom: 30px;
+        }
+        .policy-item h3 {
+            font-weight: 900;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+            border-left: 4px solid var(--dark-blue);
+            padding-left: 15px;
+        }
+        .policy-item p {
+            font-weight: 400;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        .external-link {
+            color: var(--accent-red);
+            text-decoration: none;
+        }
+        .external-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav-container"></div>
+
+    <div class="content">
+        <header style="background: var(--dark-blue); color: white; text-align: center; padding: 60px 0;">
+            <h1>プライバシーポリシー</h1>
+        </header>
+
+        <main class="container">
+            <section class="about policy-section">
+                <h2>Privacy Policy</h2>
+                <p>慶應義塾大学無線工学研究会は、当サイトにおける個人情報の取扱いについて、以下のとおりプライバシーポリシーを定めます。</p>
+
+                <div class="policy-item">
+                    <h3>個人情報の利用目的</h3>
+                    <p>当サイトでは、お問い合わせの際、名前やメールアドレスなどの個人情報を入力いただく場合がございます。取得した個人情報は、お問い合わせに対する回答や必要な情報をメールなどでご連絡する場合や、入会に関する手続きに利用させていただくものであり、これらの目的以外では利用いたしません。</p>
+                </div>
+
+                <div class="policy-item">
+                    <h3>アクセス解析ツールについて</h3>
+                    <p>当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を使用しています。このGoogleアナリティクスはデータの収集のためにCookieを使用しています。このデータは匿名で収集されており、個人を特定するものではありません。</p>
+                    <p>この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。この規約に関しての詳細は<a href="https://marketingplatform.google.com/about/analytics/terms/jp/" class="external-link" target="_blank" rel="noopener">Googleアナリティクスサービス利用規約</a>のページや<a href="https://policies.google.com/technologies/ads?hl=ja" class="external-link" target="_blank" rel="noopener">Googleポリシーと規約</a>ページをご覧ください。</p>
+                </div>
+            </section>
+
+            <section class="footer-cta">
+                <a href="index.html" class="btn">トップへ戻る</a>
+                <a href="contacts.html" class="btn">お問い合わせ</a>
+            </section>
+        </main>
+    </div>
+
+    <footer style="text-align: center;">&copy; 2026 Keio Radio Society. ALL RIGHTS RESERVED.</footer>
+
+    <script src="nav.js"></script>
+    <script>
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(data => { document.getElementById('nav-container').innerHTML = data; })
+        .catch(err => console.error(err));
+    </script>
+</body>
+</html>
