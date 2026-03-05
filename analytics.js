@@ -1,5 +1,5 @@
 
-var gaId = 'G-XXXXXXXXXX'; 
+var gaId = 'G-34FYRQVZMN'; 
 
 var script = document.createElement('script');
 script.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
@@ -12,3 +12,4 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 gtag('config', gaId);
+
